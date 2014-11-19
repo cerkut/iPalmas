@@ -1,0 +1,23 @@
+#N canvas 845 412 367 261 10;
+#X obj 138 33 inlet;
+#X obj 166 54 inlet;
+#X obj 116 237 outlet;
+#X obj 137 110 timer;
+#X obj 116 188 clip 10 1000;
+#X obj 156 159 -;
+#X obj 209 159 f;
+#X msg 209 110 0;
+#X obj 137 132 t f f b;
+#X text 9 -2 Return the time between two bangs. Constrain the time
+10 < OOI < 1000 2009.06.10 Antti Jylhä and Cumhur Erkut.;
+#X connect 0 0 3 0;
+#X connect 0 0 7 0;
+#X connect 1 0 3 1;
+#X connect 3 0 8 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 1;
+#X connect 7 0 6 0;
+#X connect 8 0 6 1;
+#X connect 8 1 5 0;
+#X connect 8 2 6 0;

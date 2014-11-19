@@ -1,0 +1,287 @@
+#N canvas 461 27 912 667 10;
+#X obj 95 119 loadbang;
+#X text 78 -3 bulerias style;
+#X text 391 0 soleas style;
+#X obj 24 -16 separator;
+#X obj 242 113 loadbang;
+#X obj 169 -12 separator;
+#X obj 23 68 spigot;
+#X obj 66 70 tgl 15 0 empty bulerias empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 170 64 spigot;
+#X obj 213 66 tgl 15 0 empty bulerias empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 396 115 loadbang;
+#X obj 321 -2 separator;
+#X obj 325 68 spigot;
+#X obj 368 70 tgl 15 0 empty soleas empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 540 114 loadbang;
+#X obj 468 66 spigot;
+#X obj 511 68 tgl 15 0 empty soleas empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 248 65 5 0 0 0 - - -;
+#X floatatom 103 65 8 0 0 0 - - -;
+#X obj 128 347 loadbang;
+#X obj 56 257 separator;
+#X obj 56 278 spigot;
+#X obj 99 280 tgl 15 0 empty trtext empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 184 361 5 0 0 0 - - -;
+#X obj 299 352 loadbang;
+#X obj 230 259 separator;
+#X obj 230 280 spigot;
+#X obj 273 282 tgl 15 0 empty trtext empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X floatatom 355 346 5 0 0 0 - - -;
+#X obj 484 361 loadbang;
+#X obj 410 256 separator;
+#X obj 410 277 spigot;
+#X obj 453 279 tgl 15 0 empty trtext empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X floatatom 573 296 5 0 0 0 - - -;
+#X floatatom 314 266 5 0 0 0 - - -;
+#X obj 231 306 colorRGB 0.5 0.5 0.5 1;
+#X obj 410 304 colorRGB 0.5 0.5 0.5 1;
+#X obj 55 302 colorRGB 0.5 0.5 0.5 1;
+#X floatatom 586 330 5 0 0 0 - - -;
+#X obj 56 348 text2d;
+#X obj 230 354 text2d;
+#X obj 411 360 text2d;
+#X obj 23 121 text2d;
+#X obj 170 115 text2d;
+#X obj 324 117 text2d;
+#X obj 467 115 text2d;
+#X obj 57 231 r transtx;
+#X obj 227 228 r xaccent;
+#X obj 409 227 r -nonaccent;
+#X msg 100 347 16;
+#X msg 272 353 16;
+#X msg 455 359 16;
+#X obj 56 323 translateXYZ 0 -2.89 0;
+#X obj 229 326 translateXYZ -1.85 -3.37 0;
+#X obj 411 328 translateXYZ 1.46 -3.37 0;
+#X obj 24 20 r bultrans;
+#X obj 171 13 r bulstyle;
+#X msg 214 114 22;
+#X obj 170 88 translateXYZ 0 -2.3 0;
+#X obj 323 20 r soltrans;
+#X obj 469 18 r solstyle;
+#X obj 468 90 translateXYZ 0 -2.3 0;
+#X msg 511 114 22;
+#X msg 368 116 30;
+#X obj 917 -102 r style;
+#X msg 917 397 \; transtx text transcription on 12-beat cyle \; transtx
+alias 1 \; transtx font ArialBold.ttf \; -nonaccent text - for non-accents
+\; -nonaccent alias 1 \; -nonaccent font Arial.ttf \; xaccent text
+x for accents \; xaccent alias 1 \; xaccent font Arial.ttf \; trtext
+1 \;;
+#X obj 469 45 colorRGB 0.5 0.5 0.5 1;
+#X obj 467 -5 separator;
+#X obj 633 304 spigot;
+#X obj 677 305 tgl 15 0 empty trrect empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 170 39 colorRGB 0.5 0.5 0.5 1;
+#X msg 67 120 30;
+#X obj 325 92 translateXYZ 0.011 -1.33 0;
+#X msg 407 410 \; soltrans text - - x - - x - x - x - x \; soltrans
+alias 1 \; soltrans font ArialBold.ttf \; solstyle text Soleas style
+Flamenco \; solstyle alias 1 \; solstyle font Arial.ttf \; soleas 1
+\; bulerias 0 \;;
+#X obj 24 93 translateXYZ -0.069 -1.33 0;
+#X obj 633 356 colorRGB 1 0 0 1;
+#X floatatom 776 358 5 0 0 0 - - -;
+#X floatatom 837 362 5 0 0 0 - - -;
+#X floatatom 760 393 5 0 0 0 - - -;
+#X obj 23 45 colorRGB 0.5 0.5 0.5 1;
+#X obj 633 278 gemhead 15;
+#X obj 28 -60 gemhead;
+#X obj 169 -55 gemhead;
+#X obj 348 -48 gemhead;
+#X obj 493 -42 gemhead;
+#X obj 72 185 gemhead;
+#X obj 249 175 gemhead;
+#X obj 415 186 gemhead;
+#X obj 322 45 colorRGB 0.5 0.5 0.5 1;
+#X obj 633 331 translateXYZ 3.19 -1.87 0;
+#X text 447 -107 korvaa bultrans ym palotrans:lla -> yleistä patchi
+toimimaan vähemmillä objekteilla vaikka paloja olisikin paljon;
+#X text 681 0 soleas style;
+#X obj 686 115 loadbang;
+#X obj 611 -2 separator;
+#X obj 830 114 loadbang;
+#X obj 614 117 text2d;
+#X obj 757 115 text2d;
+#X obj 793 90 translateXYZ 0 -2.3 0;
+#X msg 801 114 22;
+#X msg 658 116 30;
+#X obj 759 45 colorRGB 0.5 0.5 0.5 1;
+#X obj 757 -5 separator;
+#X obj 615 94 translateXYZ 0.011 -1.33 0;
+#X obj 638 -48 gemhead;
+#X obj 783 -42 gemhead;
+#X obj 612 45 colorRGB 0.5 0.5 0.5 1;
+#X obj 613 20 r trans;
+#X obj 768 19 r vstyle;
+#X obj 628 66 spigot;
+#X obj 671 68 tgl 15 0 empty vis empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 798 66 spigot;
+#X obj 841 68 tgl 15 0 empty vis empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 917 -77 route SOLEAS SOLEAS_ALT BULERIAS SIGUIRIYAS FANDANGOS
+;
+#X msg 991 272 \; vis 0 \; trans text x - - x - - x - - x - - \; trans
+alias 1 \; trans font ArialBold.ttf \; vstyle text Fandangos style
+\; vstyle alias 1 \; vstyle font Arial.ttf \; vis 1 \;;
+#X msg 1041 182 \; vis 0 \; trans text x - x - x - - x - - x - \; trans
+alias 1 \; trans font ArialBold.ttf \; vstyle text Siguiriyas style
+\; vstyle alias 1 \; vstyle font Arial.ttf \; vis 1 \;;
+#X msg 1011 132 \; vis 0 \; trans text - - x - - x - x - x - x \; trans
+alias 1 \; trans font ArialBold.ttf \; vstyle text Bulerias style \;
+vstyle alias 1 \; vstyle font Arial.ttf \; vis 1 \;;
+#X msg 950 45 \; vis 0 \; trans text - - x - - - x x - x - x \; trans
+alias 1 \; trans font ArialBold.ttf \; vstyle text Alt. Soleas style
+\; vstyle alias 1 \; vstyle font Arial.ttf \; vis 1 \;;
+#X msg 927 -41 \; vis 0 \; trans text - - x - - x - x - x - x \; trans
+alias 1 \; trans font ArialBold.ttf \; vstyle text Soleas style \;
+vstyle alias 1 \; vstyle font Arial.ttf \; vis 1 \;;
+#X msg 112 416 \; bultrans text x - - x - - x - x - x - \; bultrans
+alias 1 \; bultrans font ArialBold.ttf \; bulstyle text Bulerias style
+Flamenco \; bulstyle alias 1 \; bulstyle font Arial.ttf \; soleas 0
+\; bulerias 1 \;;
+#X obj 662 235 r ind;
+#X obj 662 257 * 0.5455;
+#X obj 632 383 rectangle 0.13 0.08;
+#X obj 781 257 - 3.0201;
+#X obj 810 300 - 3.1365;
+#X obj 575 158 r style;
+#X obj 576 182 route SOLEAS SOLEAS_ALT BULERIAS SIGUIRIYAS FANDANGOS
+;
+#X obj 634 247 -;
+#X msg 577 207 3.102;
+#X msg 631 209 3.1265;
+#X msg 684 207 3.1;
+#X msg 716 207 2.974;
+#X msg 760 212 2.974;
+#X connect 0 0 71 0;
+#X connect 3 0 79 0;
+#X connect 4 0 57 0;
+#X connect 5 0 70 0;
+#X connect 6 0 74 0;
+#X connect 7 0 6 1;
+#X connect 8 0 58 0;
+#X connect 9 0 8 1;
+#X connect 10 0 63 0;
+#X connect 11 0 88 0;
+#X connect 12 0 72 0;
+#X connect 13 0 12 1;
+#X connect 14 0 62 0;
+#X connect 15 0 61 0;
+#X connect 16 0 15 1;
+#X connect 17 0 58 2;
+#X connect 18 0 74 1;
+#X connect 19 0 49 0;
+#X connect 20 0 21 0;
+#X connect 21 0 37 0;
+#X connect 22 0 21 1;
+#X connect 23 0 52 2;
+#X connect 24 0 50 0;
+#X connect 25 0 26 0;
+#X connect 26 0 35 0;
+#X connect 27 0 26 1;
+#X connect 28 0 53 2;
+#X connect 29 0 51 0;
+#X connect 30 0 31 0;
+#X connect 31 0 36 0;
+#X connect 32 0 31 1;
+#X connect 33 0 54 2;
+#X connect 34 0 53 1;
+#X connect 35 0 53 0;
+#X connect 36 0 54 0;
+#X connect 37 0 52 0;
+#X connect 38 0 54 1;
+#X connect 46 0 39 0;
+#X connect 47 0 40 0;
+#X connect 48 0 41 0;
+#X connect 49 0 39 1;
+#X connect 50 0 40 1;
+#X connect 51 0 41 1;
+#X connect 52 0 39 0;
+#X connect 53 0 40 0;
+#X connect 54 0 41 0;
+#X connect 55 0 42 0;
+#X connect 56 0 43 0;
+#X connect 57 0 43 1;
+#X connect 58 0 43 0;
+#X connect 59 0 44 0;
+#X connect 60 0 45 0;
+#X connect 61 0 45 0;
+#X connect 62 0 45 1;
+#X connect 63 0 44 1;
+#X connect 64 0 112 0;
+#X connect 66 0 15 0;
+#X connect 67 0 66 0;
+#X connect 68 0 89 0;
+#X connect 69 0 68 1;
+#X connect 70 0 8 0;
+#X connect 71 0 42 1;
+#X connect 72 0 44 0;
+#X connect 74 0 42 0;
+#X connect 75 0 121 0;
+#X connect 76 0 89 2;
+#X connect 77 0 121 1;
+#X connect 78 0 121 2;
+#X connect 79 0 6 0;
+#X connect 80 0 68 0;
+#X connect 81 0 79 0;
+#X connect 82 0 70 0;
+#X connect 83 0 88 0;
+#X connect 84 0 66 0;
+#X connect 85 0 21 0;
+#X connect 86 0 26 0;
+#X connect 87 0 31 0;
+#X connect 88 0 12 0;
+#X connect 89 0 75 0;
+#X connect 92 0 99 0;
+#X connect 93 0 105 0;
+#X connect 94 0 98 0;
+#X connect 97 0 96 0;
+#X connect 98 0 96 1;
+#X connect 99 0 95 1;
+#X connect 100 0 110 0;
+#X connect 101 0 100 0;
+#X connect 102 0 95 0;
+#X connect 103 0 105 0;
+#X connect 104 0 100 0;
+#X connect 105 0 108 0;
+#X connect 106 0 95 0;
+#X connect 107 0 96 0;
+#X connect 108 0 102 0;
+#X connect 109 0 108 1;
+#X connect 110 0 97 0;
+#X connect 111 0 110 1;
+#X connect 112 0 65 0;
+#X connect 112 0 117 0;
+#X connect 112 1 65 0;
+#X connect 112 1 116 0;
+#X connect 112 2 115 0;
+#X connect 112 2 65 0;
+#X connect 112 3 65 0;
+#X connect 112 3 114 0;
+#X connect 112 4 65 0;
+#X connect 112 4 113 0;
+#X connect 119 0 120 0;
+#X connect 120 0 126 0;
+#X connect 124 0 125 0;
+#X connect 125 0 127 0;
+#X connect 125 1 128 0;
+#X connect 125 2 129 0;
+#X connect 125 3 130 0;
+#X connect 125 4 131 0;
+#X connect 126 0 89 1;
+#X connect 127 0 126 1;
+#X connect 128 0 126 1;
+#X connect 129 0 126 1;
+#X connect 130 0 126 1;
+#X connect 131 0 126 1;

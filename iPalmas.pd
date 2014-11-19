@@ -1,0 +1,47 @@
+#N canvas 418 2 801 370 10;
+#X obj 110 222 vsynth;
+#X obj 110 132 tgl 30 0 empty empty fullscreen 0 -9 0 10 -262144 -1
+-1 0 1;
+#X obj 143 181 tgl 30 0 empty empty 400_X_300 0 -9 0 10 -262144 -1
+-1 1 1;
+#X obj 212 134 tgl 30 0 trrect empty Start_/_stop_tutoring 0 -9 0 10
+-262144 -1 -1 1 1;
+#X text 399 136 Visual feedback synthesis module in iPalmas aims to
+support practicing different clapping patterns in Flamenco style. Feedback
+is achived in real-time when a user defines the Flamenco clap pattern
+style.;
+#N canvas 490 323 648 512 more 0;
+#X text 92 -10 User chooses the dimension of the screen and starts
+the tutoring session. Clapping input of the user is represented on
+the left top of the screen with a gray clored circle. Tutor is visualized
+with red color circle and loacated on the top right of the screen.
+;
+#X text 89 61 When the user starts the tutoring session \, red circle
+/visual tutor responds repetitively based on the defined tempo based
+and the chosen style. Visual tutor highlights the accentuated beats
+by scaling up the radius size and the thickness of the red circle.
+Whenever there is non-accentuated beat in the pattern \, the radius
+and the thickness of the circle are scaled down to the original dimensions.
+;
+#X text 91 175 Visual feedback synthesis module listes to the clapping
+input of the user and visualize the tempo and patern input with the
+gray color circle. Similar to the visual tutor responses \, the accentuated
+beats are highlighted with resizing the radius and the tichness of
+the circle \, and they are scaled down to the original dimensions when
+the module recognize non-accentuated beats in the pattern. Visual transcription
+of the tutorial pattern is also displayed below the cirlces on the
+screen. The symbol x represents the accentuated beat and the symbol
+- represents non-accentuated beat.;
+#X text 89 332 When the user begins to match the clapping pattern and
+the tempo \, the gray circle moves towards the red circle in order
+to give matching -closer feedback to the user. The moment that the
+visual feedback synthesis module recognizes the possible exact match
+\, then the gray circle locates itself on top of the red circle and
+both of them responds within the pattern. If the user chnages the tempo
+then the gray cicle moves apart from the red one.;
+#X restore 409 213 pd more text here;
+#X obj 212 222 dataread;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 6 0;
+#X coords 0 -1 1 1 245 140 1 100 100;

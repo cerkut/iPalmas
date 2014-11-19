@@ -1,0 +1,18 @@
+2009-08-18  Antti Jylhä
+
+	* bug fix
+
+
+2009-08-14  Antti Jylhä  
+
+	* added bonk~ threshold adjustment to 002_dancer_app.pd and made robustness fixes
+
+	* minor edits in clap_tracker3mod.pd
+
+
+2009-08-12  Antti Jylhä  
+
+	* added 002_dancer_app.pd for rhythmic interaction in dancing
+
+	* added clap_tracker3mod.pd for double-beat analysis
+

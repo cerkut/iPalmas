@@ -1,0 +1,268 @@
+#N canvas 291 541 1234 650 12;
+#X obj 5 6 bng 15 250 50 0 empty clap_start ON 0 -6 0 8 -262144 -1
+-1;
+#X obj 91 6 bng 15 250 50 0 empty clap_stop OFF 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 10 285 1 0 1 2 syncronzation_ON/OFF - -;
+#X obj 196 23 bng 40 50 50 0 empty empty Tap_Here! 0 -6 0 8 -258113
+-1 -1;
+#X obj 10 308 s sync;
+#X obj 196 70 s ctrl;
+#X obj 10 360 vsl 15 70 0 1 0 0 empty empty bad_syncronization 0 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 47 399 s ord;
+#X text 8 430 good_syncronization;
+#X msg 91 20 0 \; sc 3500 \; ba bang \; onoff 0;
+#X msg 91 121 \; rev 1;
+#X obj 91 96 pipe 4000;
+#X text 14 513 ----------------------------------------;
+#X text 14 563 ----------------------------------------;
+#X text 13 554 TKK \, Acoustics LAB.;
+#X text 13 525 ClaPD $Revision: 1.1 $;
+#X obj 629 385 output~;
+#X floatatom 840 201 5 0 1 0 - - -;
+#X obj 840 220 min 1;
+#X msg 840 243 roomsize \$1;
+#X floatatom 735 201 5 0 0 0 - - -;
+#X obj 735 221 / 100;
+#X msg 735 243 damping \$1;
+#X floatatom 647 201 5 0 0 0 - - -;
+#X obj 647 221 / 100;
+#X msg 647 244 width \$1;
+#X floatatom 876 288 5 0 0 0 - - -;
+#X msg 876 307 wet \$1;
+#X floatatom 953 288 5 0 0 0 - - -;
+#X obj 953 242 loadbang;
+#X obj 936 378 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg 936 394 freeze \$1;
+#X obj 836 377 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg 836 393 bypass \$1;
+#X msg 767 392 print;
+#X msg 953 307 dry \$1;
+#X msg 290 261 bang;
+#X msg 368 281 start;
+#X msg 371 308 stop;
+#X obj 333 345 writesf~ 1;
+#X obj 475 131 r clap;
+#X obj 836 338 r rev;
+#X text 291 212 Write to file;
+#X text 646 180 Reverberation;
+#X obj 290 288 del 10000;
+#X obj 204 288 del 8000;
+#X obj 203 338 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 333 230 open test1.wav;
+#X msg 953 265 0.22;
+#X floatatom 454 30 5 0 0 2 Y - -;
+#X floatatom 404 29 5 0 0 2 X - -;
+#X floatatom 80 300 1 0 1 2 GUI_ON/OFF - -;
+#X obj 80 323 s GUI;
+#X floatatom 123 313 5 0 0 2 t_flash - -;
+#X obj 123 332 s flash;
+#N canvas 131 44 1093 279 sub 0;
+#X obj 300 125 myclapper2 37 3 6;
+#X obj 450 75 myPatron 24 4 4;
+#X obj 750 0 myclapper2 5 6 1;
+#X obj 0 0 myclapper2 0 1 1;
+#X obj 150 0 myclapper2 1 2 1;
+#X obj 300 0 myclapper2 2 3 1;
+#X obj 450 0 myclapper2 3 4 1;
+#X obj 600 0 myclapper2 4 5 1;
+#X obj 900 0 myclapper2 6 7 1;
+#X obj 0 25 myclapper2 7 1 2;
+#X obj 150 25 myclapper2 8 2 2;
+#X obj 300 25 myclapper2 9 3 2;
+#X obj 450 25 myclapper2 10 4 2;
+#X obj 600 25 myclapper2 11 5 2;
+#X obj 750 25 myclapper2 12 6 2;
+#X obj 900 25 myclapper2 13 7 2;
+#X obj 0 50 myclapper2 14 1 3;
+#X obj 150 50 myclapper2 15 2 3;
+#X obj 300 50 myclapper2 16 3 3;
+#X obj 450 50 myclapper2 17 4 3;
+#X obj 600 50 myclapper2 18 5 3;
+#X obj 750 50 myclapper2 19 6 3;
+#X obj 900 50 myclapper2 20 7 3;
+#X obj 0 75 myclapper2 21 1 4;
+#X obj 150 75 myclapper2 22 2 4;
+#X obj 300 75 myclapper2 23 3 4;
+#X obj 600 75 myclapper2 25 5 4;
+#X obj 750 75 myclapper2 26 6 4;
+#X obj 900 75 myclapper2 27 7 4;
+#X obj 0 100 myclapper2 28 1 5;
+#X obj 150 100 myclapper2 29 2 5;
+#X obj 300 100 myclapper2 30 3 5;
+#X obj 450 100 myclapper2 31 4 5;
+#X obj 600 100 myclapper2 32 5 5;
+#X obj 750 100 myclapper2 33 6 5;
+#X obj 900 100 myclapper2 34 7 5;
+#X obj 0 125 myclapper2 35 1 6;
+#X obj 150 125 myclapper2 36 2 6;
+#X obj 450 125 myclapper2 38 4 6;
+#X obj 600 125 myclapper2 39 5 6;
+#X obj 750 125 myclapper2 40 6 6;
+#X obj 900 125 myclapper2 41 7 6;
+#X obj 0 150 myclapper2 42 1 7;
+#X obj 150 150 myclapper2 43 2 7;
+#X obj 300 150 myclapper2 44 3 7;
+#X obj 450 150 myclapper2 45 4 7;
+#X obj 600 150 myclapper2 46 5 7;
+#X obj 750 150 myclapper2 47 6 7;
+#X obj 900 150 myclapper2 48 7 7;
+#X restore 403 94 pd sub;
+#X msg 505 28 create;
+#X obj 404 70 audigen;
+#X obj 255 71 s clap;
+#X floatatom 47 379 5 0 0 0 - - -;
+#X text 474 57 AVOID Creating a New Subpatch.;
+#X obj 619 328 freeverb~;
+#X obj 184 -17 r main_clap;
+#X obj 565 159 - 0.07;
+#X obj 504 183 pipe 200;
+#X obj 565 122 r ooi;
+#X text 14 540 L. Peltola \, C. Erkut \, Koray Tahiroglu \, A. Jylhä
+;
+#X obj 504 212 oneclap;
+#X msg 11 238 1;
+#X obj 23 -20 sel 0 1;
+#X obj 23 -41 r crowd;
+#N canvas 15 98 622 480 presets 0;
+#X obj 40 26 inlet;
+#X msg 43 122 \; param1 0 \; param2 22050 \; param3 22050 \; param4
+0.5 \; param5 0.75 \; param6 0.625 \; param7 0.7 \; param8 0.5 \; param9
+0.53761 \;;
+#X msg 116 307 \; param1 0 \; param2 10000 \; param3 4637 \; param4
+0.98 \; param5 0.685 \; param6 0.779 \; param7 0.74 \; param8 0.68
+\; param9 0.53761 \;;
+#X msg 199 123 \; param1 0 \; param2 10000 \; param3 4637 \; param4
+0.98 \; param5 0.685 \; param6 0.779 \; param7 0.74 \; param8 0.68
+\; param9 0 \;;
+#X msg 278 304 \; param1 10 \; param2 10000 \; param3 4637 \; param4
+0.99 \; param5 0.685 \; param6 0.779 \; param7 0.889 \; param8 0.84
+\; param9 0.53761 \;;
+#X msg 359 131 \; param1 10 \; param2 10000 \; param3 4637 \; param4
+0.99 \; param5 0.685 \; param6 0.779 \; param7 0.889 \; param8 0.84
+\; param9 0 \;;
+#X msg 443 303 \; param1 216.535 \; param2 22050 \; param3 22050 \;
+param4 0.677165 \; param5 0.850394 \; param6 0.92126 \; param7 0.80315
+\; param8 0.818898 \; param9 0.11811 \;;
+#X obj 39 70 route default large large_noexcursion huge huge_noexcursion
+tadada;
+#X connect 0 0 7 0;
+#X connect 7 0 1 0;
+#X connect 7 1 2 0;
+#X connect 7 2 3 0;
+#X connect 7 3 4 0;
+#X connect 7 4 5 0;
+#X connect 7 5 6 0;
+#X restore 1040 353 pd presets;
+#X msg 1040 211 default;
+#X msg 1040 280 huge;
+#X msg 1040 303 huge_noexcursion;
+#X msg 1040 234 large;
+#X msg 1040 257 large_noexcursion;
+#X text 1018 186 some presets:;
+#X text 1016 124 click to edit parameters:;
+#X obj 1041 412 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 1101 412 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 1101 434 s wet;
+#X obj 1041 434 s dry;
+#X msg 1040 326 tadada;
+#X text 1014 385 toggle dry/wet output:;
+#N canvas 670 63 280 336 edit_params 0;
+#X obj 25 92 hsl 128 15 220.5 22050 1 0 param3 param3 damping -2 -8
+0 10 -262144 -1 -1 0 0;
+#X floatatom 157 91 10 0 0 0 - param3 damping;
+#X obj 25 123 hsl 128 15 0 1 0 0 param4 param4 decay -2 -8 0 10 -262144
+-1 -1 0 0;
+#X floatatom 157 122 10 0 0 0 - param4 decay;
+#X obj 25 28 hsl 128 15 0 250 0 0 param1 param1 predelay -2 -8 0 10
+-262144 -1 -1 0 0;
+#X floatatom 157 27 10 0 0 0 - param1 predelay;
+#X obj 25 60 hsl 128 15 220.5 22050 1 0 param2 param2 bandwidth -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 157 59 10 0 0 0 - param2 bandwidth;
+#X obj 24 191 hsl 128 15 0 1 0 0 param6 param6 input_diffusion_2 -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 156 190 10 0 0 0 - param6 input_diffusion2;
+#X obj 25 156 hsl 128 15 0 1 0 0 param5 param5 input_diffusion_1 -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 157 155 10 0 0 0 - param5 input_diffusion1;
+#X obj 23 255 hsl 128 15 0 1 0 0 param8 param8 decay_diffusion_2 -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 155 254 10 0 0 0 - param8 decay_diffusion2;
+#X obj 24 222 hsl 128 15 0 1 0 0 param7 param7 decay_diffusion_1 -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 156 221 10 0 0 0 - param7 decay_diffusion1;
+#X obj 23 287 hsl 128 15 0 5 0 0 param9 param9 excursion -2 -8 0 10
+-262144 -1 -1 0 0;
+#X floatatom 155 286 10 0 0 0 - param9 excursion;
+#X restore 1039 149 pd edit_params;
+#X obj 11 207 loadbang;
+#X msg 5 20 1 \; sc 0 \; ba bang \; onoff 1 \; rev 0;
+#X connect 0 0 87 0;
+#X connect 1 0 9 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 6 0 7 0;
+#X connect 6 0 59 0;
+#X connect 9 0 11 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 61 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 22 0 61 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 61 0;
+#X connect 26 0 27 0;
+#X connect 27 0 61 0;
+#X connect 28 0 35 0;
+#X connect 29 0 48 0;
+#X connect 30 0 31 0;
+#X connect 31 0 61 0;
+#X connect 32 0 33 0;
+#X connect 33 0 61 0;
+#X connect 34 0 61 0;
+#X connect 35 0 61 0;
+#X connect 36 0 37 0;
+#X connect 36 0 44 0;
+#X connect 36 0 45 0;
+#X connect 37 0 39 0;
+#X connect 38 0 39 0;
+#X connect 40 0 64 0;
+#X connect 41 0 32 0;
+#X connect 41 0 30 0;
+#X connect 44 0 38 0;
+#X connect 45 0 46 0;
+#X connect 47 0 39 0;
+#X connect 48 0 28 0;
+#X connect 51 0 52 0;
+#X connect 53 0 54 0;
+#X connect 61 0 39 0;
+#X connect 61 0 16 0;
+#X connect 61 1 16 1;
+#X connect 62 0 3 0;
+#X connect 63 0 64 1;
+#X connect 64 0 67 0;
+#X connect 65 0 63 0;
+#X connect 67 0 61 1;
+#X connect 67 0 61 0;
+#X connect 68 0 2 0;
+#X connect 69 0 1 0;
+#X connect 69 1 0 0;
+#X connect 70 0 69 0;
+#X connect 72 0 71 0;
+#X connect 73 0 71 0;
+#X connect 74 0 71 0;
+#X connect 75 0 71 0;
+#X connect 76 0 71 0;
+#X connect 79 0 82 0;
+#X connect 80 0 81 0;
+#X connect 83 0 71 0;
+#X connect 86 0 68 0;
