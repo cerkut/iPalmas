@@ -1,7 +1,7 @@
 iPalmas
 =======
 
-Rythmic interaction, as described in [1] and [2]. Please refer to: http://dx.doi.org/10.5072/zenodo.12772
+Rythmic interaction, as described in [1] and [2]. Please refer to: http://dx.doi.org/10.5281/zenodo.12772
 
 [1] A. Jylhä, I. Ekman, C. Erkut, and K. Tahiroğlu, “Design and Evaluation of Rhythmic Interaction with an Interactive Tutoring
 System,” Computer Music J., vol. 35, no. 2, pp. 36–48, 2011.
